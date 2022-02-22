@@ -2,7 +2,7 @@ using EFCore.Models;
 using EFCore.Responsitory;
 namespace EFCore.Services
 {
-    public class StudentServices : IServices
+    public class StudentServices : IStudent
     {
         private readonly  IStudentResponsitory _studentResponsitory ;
 
