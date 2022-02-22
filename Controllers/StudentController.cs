@@ -13,28 +13,28 @@ namespace EFCore.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        private readonly IServices _iServices;
-        public StudentController(IServices iServices) 
+        private readonly IStudent _iStudent;
+        public StudentController(IStudent iStudent) 
         {
-            _iServices = iServices;
+            _iStudent = iStudent;
         }
        [HttpGet]
        public List<Student> GetAll(){
-           return _iServices.GetAll();
+           return _iStudent.GetAll();
        }
        [HttpPost]
        public HttpStatusCode Create(Student std){
-           _iServices.Create(std);
+           _iStudent.Create(std);
            return HttpStatusCode.OK;
        }
        [HttpPut]
        public HttpStatusCode Update(Student std){
-           _iServices.Update(std);
+           _iStudent.Update(std);
            return HttpStatusCode.OK;
        }
        [HttpDelete]
        public HttpStatusCode Delete(int id){
-           _iServices.Delete(id);
+           _iStudent.Delete(id);
            return HttpStatusCode.OK;
        }
     }
