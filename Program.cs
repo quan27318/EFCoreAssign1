@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<StudentDbContext>(
     options => options.UseSqlServer("Server=ADMIN-PC;Initial Catalog=DBName;Integrated Security=True")
 );
-builder.Services.AddTransient<IServices , StudentServices>();
+builder.Services.AddTransient<IStudent , StudentServices>();
 builder.Services.AddTransient<IStudentResponsitory, StudentResponsitory>();
 var app = builder.Build();
 
